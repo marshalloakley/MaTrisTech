@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaTrIs Tech | Commercial & Residential Camera Installation</title>
+    <title>MaTrIs Tech | Western KY Camera Installation</title>
     <style>
         :root {
             --bg-dark: #050a12;      
@@ -203,7 +203,7 @@
             gap: 1.5rem;
         }
 
-        /* Tech Hardened Cards */
+        /* Cards */
         .card {
             background: var(--bg-card);
             border: 1px solid #142238;
@@ -248,6 +248,44 @@
             position: absolute;
             left: 0;
             color: var(--cyber-blue);
+        }
+
+        /* Local Coverage Banner & Map Infrastructure */
+        .coverage-block {
+            background: linear-gradient(90deg, rgba(0, 85, 204, 0.1), transparent);
+            border-top: 1px solid #142238;
+            border-bottom: 1px solid #142238;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .coverage-block p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+        }
+
+        .coverage-block p span {
+            color: var(--cyber-blue);
+        }
+
+        .map-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 2px solid #142238;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            filter: invert(90%) hue-rotate(195deg) saturate(135%) contrast(90%);
         }
 
         /* Team / Ownership Section */
@@ -335,7 +373,7 @@
             border-top: 1px solid #0f1929;
         }
 
-        /* Responsive Layout fixes */
+        /* Mobile Optimization Fixes */
         @media (max-width: 768px) {
             header { padding: 1rem; }
             nav { display: none; }
@@ -343,6 +381,7 @@
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.1rem; }
             .section-title { font-size: 1.8rem; }
+            .map-container { height: 300px; }
         }
     </style>
 </head>
@@ -350,7 +389,6 @@
 
     <header>
         <div class="logo-container">
-            <!-- Cool Tech Camera Aperture / Lens SVG Logo -->
             <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="16" cy="16" r="14" stroke="#00d2ff" stroke-width="2.5"/>
                 <circle cx="16" cy="16" r="6" stroke="#00d2ff" stroke-width="1.5"/>
@@ -371,57 +409,63 @@
 
     <section id="home" class="hero">
         <div class="badge-container">
-            <span class="badge">Locally Owned & Operated</span>
-            <span class="badge">Veteran Owned & Operated</span>
+            <span class="badge">Western KY Locals</span>
+            <span class="badge">Camera Infrastructure & Installation</span>
         </div>
         <h1>MaTrIs <span>Tech</span></h1>
-        <p>No corporate fluff. We design, pull cable, mount hardware, and configure high-performance security camera systems. We specialize in weekend installations so your business stays up and running.</p>
+        <p>No corporate fluff. We design, pull cable, mount hardware, and configure high-performance security camera systems. We specialize in weekend installations so your operations stay active.</p>
         <div class="cta-buttons">
-            <!-- Swapping 5555555555 triggers standard direct dialer -->
             <a href="tel:5555555555" class="btn btn-primary">Call Now</a>
             <a href="mailto:inquiry@matrichtech.com" class="btn btn-secondary">Email Inquiries</a>
         </div>
     </section>
 
+    <div class="coverage-block">
+        <p>Based in <span>Western Kentucky</span> — Camera system setup and structural cabling across <span>Lyon County</span>, <span>Marshall County</span>, and neighboring regions.</p>
+        <div class="map-wrapper">
+            <iframe class="map-container" src="https://www.openstreetmap.org/export/embed.html?bbox=-88.4726%2C36.7862%2C-87.9041%2C37.1557&amp;layer=mapnik"></iframe>
+        </div>
+    </div>
+
     <section id="services" class="content-block">
         <h2 class="section-title">What We <span>Do</span></h2>
         <div class="grid">
             <div class="card">
-                <h3>Full Planning & Install</h3>
-                <p>We handle the entire pipeline from scratch. We sit down with you to map out angles, calculate storage retention limits, select the best hardware for your environment, run the lines, and mount the system.</p>
+                <h3>Full System Planning & Install</h3>
+                <p>We handle the entire physical deployment pipeline. We map out optimal sightlines, select the exact hardware variants for your environment, pull the ethernet drops, mount the cameras, and build out the local recording station.</p>
             </div>
             <div class="card">
-                <h3>Installation Only</h3>
-                <p>Already bought your own NVR, POE switch, or camera hardware pack? Don't spend your weekend on a ladder. We will pull the ethernet lines, punch down connections, drop your cameras into position, and clean up the runs.</p>
+                <h3>Hardware Installation Only</h3>
+                <p>Already purchased an NVR, PoE switch, or camera package? We take care of the heavy lifting. We pull clean network lines, punch down connections, drop your cameras into position, and test the video feeds.</p>
             </div>
         </div>
     </section>
 
     <section class="content-block" style="padding-top:0;">
-        <h2 class="section-title">Built For Your <span>Environment</span></h2>
+        <h2 class="section-title">100% Local Control. <span>No Contracts.</span></h2>
         <div class="grid">
             <div class="card">
                 <h3>Small Businesses</h3>
                 <ul>
-                    <li>Coverage for registers, inventory storage, and entry points.</li>
-                    <li>Zero interruption to your daily business hours via weekend drop-ins.</li>
-                    <li>Local or remote storage access with no forced ongoing cloud fees.</li>
+                    <li>Strategic coverage for points of sale, inventory storage, and external entry zones.</li>
+                    <li>Weekend installation workflows to avoid impacting regular business operational hours.</li>
+                    <li>Local hardware arrays with no continuous software subscription requirements.</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Churches & Worship Houses</h3>
+                <h3>Churches & Houses of Worship</h3>
                 <ul>
-                    <li>Clean, low-profile cable runs that preserve the aesthetics of the building.</li>
-                    <li>Strategic perimeter and main hall monitoring layouts.</li>
-                    <li>Simple, user-friendly management interfaces for security teams.</li>
+                    <li>Concealed, aesthetic-preserving network runs mapped carefully through older architectures.</li>
+                    <li>Perimeter protection and main gathering space coverage layouts.</li>
+                    <li>Straightforward local access control panels tailored for internal staff.</li>
                 </ul>
             </div>
             <div class="card">
                 <h3>Residential Properties</h3>
                 <ul>
-                    <li>Hardwired, dependable security camera placement covering blind spots.</li>
-                    <li>No reliance on flaky wireless setups or subscription paywalls.</li>
-                    <li>Complete local data ownership and control.</li>
+                    <li>Hardwired PoE camera placements targeting exterior blind spots and access paths.</li>
+                    <li>Elimination of unstable wireless camera connections and continuous cloud-storage paywalls.</li>
+                    <li>Complete isolation of video storage — nobody has access to the recorded streams but you.</li>
                 </ul>
             </div>
         </div>
@@ -430,30 +474,30 @@
     <section id="team" class="content-block origin-block">
         <h2 class="section-title">The Men Behind <span>MaTrIs</span></h2>
         <p class="identity-statement">
-            Our company name represents who we are. <strong>Ma</strong>rshall, <strong>Tr</strong>istan, and <strong>Is</strong>aac combine network management, operations, and system engineering to handle deployments cleanly from end to end.
+            Our company name represents who we are. <strong>Ma</strong>rshall, <strong>Tr</strong>istan, and <strong>Is</strong>aac combine network engineering, project management, and hardware deployment to deliver clean camera system builds.
         </p>
         <div class="owner-grid">
             <div class="owner-card">
                 <h3>Marshall Oakley</h3>
-                <div class="owner-role">Network Planning & Management</div>
-                <p>Manages the backend network infrastructure, switch configurations, routing architectures, and local remote-access profiles to ensure data feeds run fast and stay secure.</p>
+                <div class="owner-role">Camera & Network Infrastructure</div>
+                <p>Manages backend system architectures, managed switch assignments, isolated network pathways, and camera recording profiles. Focuses on robust local storage arrays and reliable local system access paths.</p>
             </div>
             <div class="owner-card">
                 <h3>Tristan Vagts</h3>
-                <div class="owner-role">Business Operations & Logistics</div>
-                <p>Handles the primary project coordination, client engagement, site logistics, and operational execution to keep field jobs running on time and on budget.</p>
+                <div class="owner-role">Veteran & Operations Logistics</div>
+                <p>A veteran directing on-site deployment operations and structural physical configurations. Manages field workflows, structural safety profiles, and ensures hardware builds are completed efficiently and securely.</p>
             </div>
             <div class="owner-card">
                 <h3>Isaac Rushing</h3>
-                <div class="owner-role">Systems Engineering & Layout Design</div>
-                <p>The technical architect for site blueprints. Calculates power budgets, lens focal distances, storage matrices, and defines the structural framework for camera placement.</p>
+                <div class="owner-role">Camera System Engineering</div>
+                <p>Handles site layouts and coverage blueprint planning. Coordinates power-over-ethernet budgets, focal range metrics, hardware capacity sizing, and absolute field-of-view positioning for optimal blind spot coverage.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-banner">
-        <h2>Get a Quote</h2>
-        <p>Tell us what you need or what gear you already have. We'll lay out a straight path forward and book a weekend slot to get it done.</p>
+        <h2>Get Your Local Quote</h2>
+        <p>Tell us your site requirements or what camera equipment you want deployed. We'll outline a straight engineering plan and schedule a weekend slot to install it.</p>
         <div class="cta-buttons">
             <a href="tel:5555555555" class="btn btn-primary">Call Now</a>
             <a href="mailto:inquiry@matrichtech.com" class="btn btn-secondary">Email Operations</a>
@@ -461,7 +505,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 MaTrIs Tech. Physical Security & Infrastructure Deployments. All rights reserved.</p>
+        <p>&copy; 2026 MaTrIs Tech. Camera Infrastructure & Installation Deployments. All rights reserved.</p>
     </footer>
 
 </body>
