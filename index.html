@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaTrIs Tech | Commercial & Residential Camera Installation</title>
+    <style>
+        :root {
+            --bg-dark: #050a12;      
+            --bg-card: #0b1322;      
+            --cyber-blue: #00d2ff;   
+            --tech-blue: #0055cc;    
+            --text-main: #f0f4f8;    
+            --text-muted: #7e93a7;   
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Header Navigation & Tech Logo */
+        header {
+            background-color: rgba(5, 10, 18, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 2px solid rgba(0, 210, 255, 0.2);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        .logo-text span {
+            color: var(--cyber-blue);
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--cyber-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 1.5rem 4rem 1.5rem;
+            background: radial-gradient(circle at 50% 40%, rgba(0, 85, 204, 0.15) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            color: var(--text-muted);
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .badge {
+            background-color: rgba(0, 210, 255, 0.05);
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            color: var(--cyber-blue);
+            padding: 0.4rem 1rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.85rem 2.2rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--tech-blue);
+            color: var(--text-main);
+            border: 1px solid var(--cyber-blue);
+            box-shadow: 0 4px 14px rgba(0, 85, 204, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #0066ee;
+            box-shadow: 0 4px 20px rgba(0, 210, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--cyber-blue);
+            border: 1px solid var(--cyber-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(0, 210, 255, 0.08);
+        }
+
+        /* General Section Formatting */
+        section.content-block {
+            padding: 5rem 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--cyber-blue);
+            padding-left: 1rem;
+        }
+
+        .section-title span {
+            color: var(--cyber-blue);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Tech Hardened Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid #142238;
+            padding: 2.5rem 2rem;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--cyber-blue);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #b0c0d2;
+        }
+
+        .card ul li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--cyber-blue);
+        }
+
+        /* Team / Ownership Section */
+        .origin-block {
+            border-top: 1px solid #142238;
+            border-bottom: 1px solid #142238;
+            background-color: #070e1a;
+        }
+
+        .identity-statement {
+            max-width: 800px;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        .identity-statement strong {
+            color: var(--text-main);
+        }
+
+        .owner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .owner-card {
+            background: var(--bg-dark);
+            border: 1px solid #142238;
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .owner-card h3 {
+            font-size: 1.2rem;
+            color: var(--cyber-blue);
+            margin-bottom: 0.25rem;
+            text-transform: none;
+        }
+
+        .owner-role {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .owner-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Contact Block */
+        .contact-banner {
+            background: radial-gradient(circle at center, #0a1526 0%, var(--bg-dark) 100%);
+            border-top: 1px solid rgba(0, 210, 255, 0.15);
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+
+        .contact-banner h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .contact-banner p {
+            margin-bottom: 2.5rem;
+            color: var(--text-muted);
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #03060b;
+            color: #435366;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            border-top: 1px solid #0f1929;
+        }
+
+        /* Responsive Layout fixes */
+        @media (max-width: 768px) {
+            header { padding: 1rem; }
+            nav { display: none; }
+            .hero { padding-top: 7rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <!-- Cool Tech Camera Aperture / Lens SVG Logo -->
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" stroke="#00d2ff" stroke-width="2.5"/>
+                <circle cx="16" cy="16" r="6" stroke="#00d2ff" stroke-width="1.5"/>
+                <path d="M16 2L22 10" stroke="#00d2ff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M30 16L22 22" stroke="#00d2ff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 30L10 22" stroke="#00d2ff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M2 16L10 10" stroke="#00d2ff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">MaTrIs <span>Tech</span></div>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Deployments</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="badge-container">
+            <span class="badge">Locally Owned & Operated</span>
+            <span class="badge">Veteran Owned & Operated</span>
+        </div>
+        <h1>MaTrIs <span>Tech</span></h1>
+        <p>No corporate fluff. We design, pull cable, mount hardware, and configure high-performance security camera systems. We specialize in weekend installations so your business stays up and running.</p>
+        <div class="cta-buttons">
+            <!-- Swapping 5555555555 triggers standard direct dialer -->
+            <a href="tel:5555555555" class="btn btn-primary">Call Now</a>
+            <a href="mailto:inquiry@matrichtech.com" class="btn btn-secondary">Email Inquiries</a>
+        </div>
+    </section>
+
+    <section id="services" class="content-block">
+        <h2 class="section-title">What We <span>Do</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Full Planning & Install</h3>
+                <p>We handle the entire pipeline from scratch. We sit down with you to map out angles, calculate storage retention limits, select the best hardware for your environment, run the lines, and mount the system.</p>
+            </div>
+            <div class="card">
+                <h3>Installation Only</h3>
+                <p>Already bought your own NVR, POE switch, or camera hardware pack? Don't spend your weekend on a ladder. We will pull the ethernet lines, punch down connections, drop your cameras into position, and clean up the runs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block" style="padding-top:0;">
+        <h2 class="section-title">Built For Your <span>Environment</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Small Businesses</h3>
+                <ul>
+                    <li>Coverage for registers, inventory storage, and entry points.</li>
+                    <li>Zero interruption to your daily business hours via weekend drop-ins.</li>
+                    <li>Local or remote storage access with no forced ongoing cloud fees.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Churches & Worship Houses</h3>
+                <ul>
+                    <li>Clean, low-profile cable runs that preserve the aesthetics of the building.</li>
+                    <li>Strategic perimeter and main hall monitoring layouts.</li>
+                    <li>Simple, user-friendly management interfaces for security teams.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Residential Properties</h3>
+                <ul>
+                    <li>Hardwired, dependable security camera placement covering blind spots.</li>
+                    <li>No reliance on flaky wireless setups or subscription paywalls.</li>
+                    <li>Complete local data ownership and control.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="content-block origin-block">
+        <h2 class="section-title">The Men Behind <span>MaTrIs</span></h2>
+        <p class="identity-statement">
+            Our company name represents who we are. <strong>Ma</strong>rshall, <strong>Tr</strong>istan, and <strong>Is</strong>aac combine network management, operations, and system engineering to handle deployments cleanly from end to end.
+        </p>
+        <div class="owner-grid">
+            <div class="owner-card">
+                <h3>Marshall Oakley</h3>
+                <div class="owner-role">Network Planning & Management</div>
+                <p>Manages the backend network infrastructure, switch configurations, routing architectures, and local remote-access profiles to ensure data feeds run fast and stay secure.</p>
+            </div>
+            <div class="owner-card">
+                <h3>Tristan Vagts</h3>
+                <div class="owner-role">Business Operations & Logistics</div>
+                <p>Handles the primary project coordination, client engagement, site logistics, and operational execution to keep field jobs running on time and on budget.</p>
+            </div>
+            <div class="owner-card">
+                <h3>Isaac Rushing</h3>
+                <div class="owner-role">Systems Engineering & Layout Design</div>
+                <p>The technical architect for site blueprints. Calculates power budgets, lens focal distances, storage matrices, and defines the structural framework for camera placement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-banner">
+        <h2>Get a Quote</h2>
+        <p>Tell us what you need or what gear you already have. We'll lay out a straight path forward and book a weekend slot to get it done.</p>
+        <div class="cta-buttons">
+            <a href="tel:5555555555" class="btn btn-primary">Call Now</a>
+            <a href="mailto:inquiry@matrichtech.com" class="btn btn-secondary">Email Operations</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MaTrIs Tech. Physical Security & Infrastructure Deployments. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
